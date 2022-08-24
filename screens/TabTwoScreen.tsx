@@ -1,31 +1,124 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TextInput, Button, TouchableOpacity } from "react-native";
+import { InputPrimary } from "../components/Input/input";
+import { Text, View } from "../components/Themed";
+import { RootTabScreenProps } from "../types";
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
-
-export default function TabTwoScreen() {
+export default function TabOneScreen({
+  navigation,
+}: RootTabScreenProps<"TabOne">) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <TouchableOpacity style={styles.exit}>
+        <Text style={styles.exitText}>X</Text>
+      </TouchableOpacity>
+      <View style={styles.boxTittles}>
+        <Text style={styles.textTittle}>Log In</Text>
+        <View>
+          <Text style={styles.textTittle}>Sign Up</Text>
+          <View style={styles.borderBot}></View>
+        </View>
+      </View>
+      <InputPrimary placeholder="example@example.com" label="Email" />
+      <InputPrimary typePassword={true} label="Password" />
+      <TouchableOpacity style={styles.buttonSend}>
+        <Text style={styles.textSendButton}>REGISTER</Text>
+      </TouchableOpacity>
+      <Text style={styles.optionalLoginText}>OR</Text>
+      <TouchableOpacity style={styles.continueGoogle}>
+        <Text style={styles.textButtonContinue}>Continue with Google</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#130040",
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  exit: {
+    width: "auto",
+    display: "flex",
+    flexDirection: "row-reverse",
+    marginVertical: 5,
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  exitText: {
+    fontFamily: "Roboto",
+    fontSize: 25,
+    paddingTop: 3,
+    paddingRight: 10,
+    color: "#CAF99B",
+  },
+  buttonSend: {
+    textAlign: "center",
+    backgroundColor: "#CAF99B",
+    borderRadius: 5,
+    display: "flex",
+    justifyContent: "center",
+    alignContent: "center",
+    paddingVertical: 7,
+    width: "80%",
+    marginHorizontal: "auto",
+  },
+  textSendButton: {
+    letterSpacing: 2,
+    fontWeight: "500",
+    fontSize: 16,
+    color: "black",
+    paddingVertical: "auto",
+  },
+  forgotPassword: {
+    width: "80%",
+    marginHorizontal: "auto",
+    textAlign: "right",
+    marginVertical: 10,
+    color: "#fff",
+  },
+  optionalLoginText: {
+    letterSpacing: 4,
+    color: "#fff",
+    marginVertical: 15,
+    fontFamily: "Roboto",
+    fontSize: 30,
+    textAlign: "center",
+  },
+  continueGoogle: {
+    width: "80%",
+    paddingVertical: 10,
+    marginHorizontal: "auto",
+    backgroundColor: "transparent",
+    border: 2,
+    borderRadius: 5,
+    textAlign: "center",
+  },
+  textButtonContinue: {
+    color: "#FFF",
+    border: 2,
+    borderRadius: 5,
+    letterSpacing: 2,
+    fontWeight: "normal",
+    fontFamily: "Roboto",
+    fontSize: 25,
+  },
+  boxTittles: {
+    backgroundColor: "#130040",
+    paddingVertical: 30,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+  textTittle: {
+    fontFamily: "Roboto",
+    fontSize: 40,
+  },
+  borderTittle: {
+    fontFamily: "Roboto",
+    fontSize: 40,
+  },
+  borderBot: {
+    width: "60%",
+    marginHorizontal: "auto",
+    marginTop: 3,
+    height: 3,
+    backgroundColor: "#CAF99B",
   },
 });
