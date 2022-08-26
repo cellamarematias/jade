@@ -113,7 +113,6 @@ const styles = StyleSheet.create({
   borderTittle: {
     fontFamily: "Roboto",
     fontSize: 40,
-    color: 'white'
   },
   borderBot: {
     width: "60%",

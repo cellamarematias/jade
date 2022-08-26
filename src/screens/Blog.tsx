@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Text, View } from '../../components/Themed';
+import { Text, View } from '../components/shared/Themed';
 import { RootTabScreenProps } from '../../types';
 import theme from '../theme';
 import BlogCard from '../components/shared/BlogCard';

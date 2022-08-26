@@ -12,17 +12,18 @@ export default function TabOneScreen({
         <Text style={styles.exitText}>X</Text>
       </TouchableOpacity>
       <View style={styles.boxTittles}>
-        <Text style={styles.textTittle}>Log In</Text>
         <View>
-          <Text style={styles.textTittle}>Sign Up</Text>
+          <Text style={styles.textTittle}>Log In</Text>
           <View style={styles.borderBot}></View>
         </View>
+        <Text style={styles.textTittle}>Sign Up</Text>
       </View>
       <InputPrimary placeholder="example@example.com" label="Email" />
       <InputPrimary typePassword={true} label="Password" />
       <TouchableOpacity style={styles.buttonSend}>
-        <Text style={styles.textSendButton}>REGISTER</Text>
+        <Text style={styles.textSendButton}>LOGIN</Text>
       </TouchableOpacity>
+      <Text style={styles.forgotPassword}>Forgot your password ?</Text>
       <Text style={styles.optionalLoginText}>OR</Text>
       <TouchableOpacity style={styles.continueGoogle}>
         <Text style={styles.textButtonContinue}>Continue with Google</Text>
@@ -32,17 +33,17 @@ export default function TabOneScreen({
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#130040",
+  container:{
+    backgroundColor: '#130040'
   },
-  exit: {
-    width: "auto",
-    display: "flex",
-    flexDirection: "row-reverse",
+  exit:{
+    width: 'auto',
+    display: 'flex',
+    flexDirection: 'row-reverse',
     marginVertical: 5,
   },
-  exitText: {
-    fontFamily: "Roboto",
+  exitText:{
+    fontFamily: 'Roboto',
     fontSize: 25,
     paddingTop: 3,
     paddingRight: 10,
@@ -100,7 +101,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   boxTittles: {
-    backgroundColor: "#130040",
+    backgroundColor: '#130040',
     paddingVertical: 30,
     display: "flex",
     flexDirection: "row",
@@ -113,7 +114,6 @@ const styles = StyleSheet.create({
   borderTittle: {
     fontFamily: "Roboto",
     fontSize: 40,
-    color: 'white'
   },
   borderBot: {
     width: "60%",
