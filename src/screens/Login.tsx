@@ -1,7 +1,7 @@
 import { StyleSheet, TextInput, Button, TouchableOpacity } from "react-native";
-import { InputPrimary } from "../components/Input/input";
-import { Text, View } from "../components/Themed";
-import { RootTabScreenProps } from "../types";
+import { InputPrimary } from "../components/shared/input";
+import { Text, View } from "../components/shared/Themed";
+import { RootTabScreenProps } from "../../types";
 
 export default function TabOneScreen({
   navigation,
