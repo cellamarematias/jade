@@ -1,22 +1,24 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TextInput, Button, TouchableOpacity } from "react-native";
+import { InputPrimary } from "../components/Input/input";
+import { Text, View } from "../components/Themed";
+import { RootTabScreenProps } from "../types";
 
-import EditScreenInfo from '../../components/EditScreenInfo';
-import { Text, View } from '../../components/Themed';
-import { RootTabScreenProps } from '../../types';
-import theme from '../theme';
-import Header from '../components/shared/header';
+import EditScreenInfo from '../components/EditScreenInfo';
+import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
     <View style={styles.container}>
-      <Header></Header>
+      <Text style={styles.title}>Tab One</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.body.primaryColor,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
