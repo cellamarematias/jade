@@ -12,7 +12,7 @@ const BlogCard = (props) => (
       />
 		</View>
 		<View style={styles.center}>
-			<Text numberOfLines={3} style={styles.heading}>{props.text}</Text>
+			<Text numberOfLines={2} style={styles.heading}>{props.text}</Text>
 		</View>
   </View>
 )
@@ -20,11 +20,10 @@ const BlogCard = (props) => (
 const styles = StyleSheet.create({
   container: {
 		flexDirection: "row",
-		margin: 5,
+		margin: 10,
 		width: '95%',
-		backgroundColor: '#6053DD',
-    padding: 15,
-		paddingStart: 5,
+		backgroundColor: '#D9D9D9A6',
+    padding: 20,
     paddingBottom: 5,
     paddingTop: 5,
 		borderRadius: 5,
@@ -34,7 +33,7 @@ const styles = StyleSheet.create({
 		shadowRadius: 3,
   },
   image: {
-    width: 58,
+    width: 48,
     height: 48,
     borderRadius: 4
   },
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
 	heading: {
 		justifyContent: 'center',
 		paddingLeft: 8,
-		maxWidth: '90%',
+		maxWidth: '95%',
 		fontWeight: 'bold',
 	}
 })

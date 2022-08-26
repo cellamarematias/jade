@@ -3,12 +3,10 @@ import { Text, View } from '../../components/Themed';
 import { RootTabScreenProps } from '../../types';
 import theme from '../theme';
 import BlogCard from '../components/shared/BlogCard';
-import Header from '../components/shared/header';
 
 export default function Blog({ navigation }: RootTabScreenProps<'Blog'>) {
   return (
     <View style={styles.container}>
-			<Header></Header>
 			<View style={styles.Headercontainer}>
 				<Text style={styles.headerOne}>Crypto</Text><Text style={styles.headerTwo}>Blog</Text>
 			</View>

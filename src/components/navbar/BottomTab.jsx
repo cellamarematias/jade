@@ -39,7 +39,6 @@ const NavBar = () => {
             borderTopLeftRadius: 24,
             borderTopRightRadius: 24,
             marginTop: -40,
-            paddingBottom: 3
           }
         })}>
         <Tab.Screen name="Home" component={TabOneScreen} />
@@ -53,8 +52,7 @@ const NavBar = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    borderRadius: 20,
-    marginBottom: 5
+    borderRadius: 20
   },
 
 }
